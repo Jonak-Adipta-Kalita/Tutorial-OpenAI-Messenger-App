@@ -8,8 +8,8 @@ type Props = {};
 
 const HomePage = (props: Props) => {
   return (
-    <div className="text-white flex flex-col items-center justify-center h-screen px-2">
-      <h1 className="text-5xl font-bold mb-20">JAK OpenAI Messenger App</h1>
+    <div className="text-white flex flex-col items-center justify-center h-screen px-2 overflow-x-auto">
+      <h1 className="text-5xl font-bold mb-20">OpenAI Messenger</h1>
       <div className="flex space-x-2 text-center">
         <div>
           <div className="flex flex-col items-center justify-center mb-5">
