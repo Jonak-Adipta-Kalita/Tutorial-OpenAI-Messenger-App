@@ -1,12 +1,12 @@
 import "../styles/globals.css";
 import Providers from "./components/Providers";
-import { getServerSession } from "next-auth";
+import { getServerSession, Session } from "next-auth";
 import Login from "./components/Login";
 import MainBody from "./components/MainBody";
 import { authOptions } from "../pages/api/auth/[...nextauth]";
 
 const RootLayout = async ({ children }: { children: React.ReactNode }) => {
-  const session = await getServerSession(authOptions);
+  const session: Session | null = await getServerSession(authOptions);
 
   return (
     <html>
