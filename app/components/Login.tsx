@@ -5,7 +5,7 @@ import Image from "next/image";
 
 type Props = {};
 
-const Login = (props: Props) => {
+const Login = ({}: Props) => {
   return (
     <div className="bg-[#11A37F] h-screen flex flex-col items-center justify-center text-center">
       <Image
