@@ -1,4 +1,4 @@
-export default function Head() {
+export default () => {
   return (
     <>
       <title>JAK OpenAI Messenger App</title>
@@ -6,4 +6,4 @@ export default function Head() {
       <meta content="width=device-width, initial-scale=1" name="viewport" />
     </>
   );
-}
+};
