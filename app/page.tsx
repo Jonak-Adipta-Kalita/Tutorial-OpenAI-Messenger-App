@@ -8,13 +8,15 @@ type Props = {};
 
 const HomePage = (props: Props) => {
   return (
-    <div className="text-white flex flex-col items-center justify-center h-screen px-2 overflow-x-auto">
-      <h1 className="text-5xl font-bold mb-20">OpenAI Messenger</h1>
+    <div className="text-white flex flex-col items-center justify-center h-screen px-2 overflow-x-auto scrollbar-hide">
+      <h1 className="text-2xl md:text-5xl font-bold m-10 md:mt-0 md:mb-20">
+        OpenAI Messenger
+      </h1>
       <div className="flex space-x-2 text-center">
         <div>
           <div className="flex flex-col items-center justify-center mb-5">
-            <SunIcon className="h-8 w-8" />
-            <h2>Examples</h2>
+            <SunIcon className="h-5 md:h-8" />
+            <h2 className="text-sm md:text-lg">Examples</h2>
           </div>
           <div className="space-y-2">
             <p className="infoText">"Explain Something to me"</p>
@@ -26,8 +28,8 @@ const HomePage = (props: Props) => {
         </div>
         <div>
           <div className="flex flex-col items-center justify-center mb-5">
-            <BoltIcon className="h-8 w-8" />
-            <h2>Capabilities</h2>
+            <BoltIcon className="h-5 md:h-8" />
+            <h2 className="text-sm md:text-lg">Capabilities</h2>
           </div>
           <div className="space-y-2">
             <p className="infoText">Change the OpenAI Models to use.</p>
@@ -41,8 +43,8 @@ const HomePage = (props: Props) => {
         </div>
         <div>
           <div className="flex flex-col items-center justify-center mb-5">
-            <ExclamationTriangleIcon className="h-8 w-8" />
-            <h2>Limitations</h2>
+            <ExclamationTriangleIcon className="h-5 md:h-8" />
+            <h2 className="text-sm md:text-lg">Limitations</h2>
           </div>
           <div className="space-y-2">
             <p className="infoText">
