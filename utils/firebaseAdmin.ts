@@ -1,7 +1,7 @@
 import admin from "firebase-admin";
 import { getApps } from "firebase-admin/app";
 
-var serviceAccount = require("../serviceAccountKey.json");
+var serviceAccount = require("../serviceAccount.json");
 
 if (!getApps().length) {
   admin.initializeApp({
