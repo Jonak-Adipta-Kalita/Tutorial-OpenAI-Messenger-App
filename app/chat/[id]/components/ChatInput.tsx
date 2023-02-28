@@ -5,6 +5,7 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { FormEvent, useState } from "react";
 import { db } from "../../../../firebase";
+import toast from "react-hot-toast";
 
 type Props = {
   id: string;
@@ -42,7 +43,7 @@ const ChatInput = ({ id }: Props) => {
       message
     );
 
-    // Toast Notification
+    const notification = toast.loading("Thinking...");
 
     await fetch("/api/askQuestion", {
       method: "POST",
@@ -56,7 +57,7 @@ const ChatInput = ({ id }: Props) => {
         session,
       }),
     }).then(() => {
-      // toast notification to say loading
+      toast.success("Responded!!", { id: notification });
     });
   };
 

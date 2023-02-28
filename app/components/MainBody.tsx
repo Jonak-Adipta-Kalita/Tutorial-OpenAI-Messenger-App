@@ -1,3 +1,4 @@
+import ClientProvider from "./ClientProvider";
 import Sidebar from "./Sidebar";
 
 type Props = {
@@ -10,7 +11,7 @@ const MainBody = ({ children }: Props) => {
       <div className="bg-[#202123] max-w-xs h-screen overflow-y-auto md:min-w-[20rem] scrollbar-hide">
         <Sidebar />
       </div>
-      {/* ClientProvider-Notifications */}
+      <ClientProvider />
       <div className="bg-[#343541] flex-1">{children}</div>
     </div>
   );
