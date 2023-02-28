@@ -4,7 +4,7 @@ import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { FormEvent, useState } from "react";
-import { db } from "../../../../firebase";
+import { db } from "../../../../utils/firebase";
 import toast from "react-hot-toast";
 
 type Props = {
