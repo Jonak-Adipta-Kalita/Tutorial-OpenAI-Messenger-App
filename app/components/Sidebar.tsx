@@ -6,6 +6,7 @@ import { useCollection } from "react-firebase-hooks/firestore";
 import { collection, orderBy, query } from "firebase/firestore";
 import { db } from "../../utils/firebase";
 import ChatRow from "./ChatRow";
+import ModalSelection from "../chat/[id]/components/ModalSelection";
 
 type Props = {};
 
@@ -22,9 +23,11 @@ const Sidebar = (props: Props) => {
   return (
     <div className="p-2 flex flex-col h-screen">
       <div className="flex-1">
-        <div className="">
+        <div className="space-y-3">
           <NewChat />
-          <div className="">{/* ModalSelection */}</div>
+          <div className="hidden sm:inline">
+            <ModalSelection />
+          </div>
           {chats?.docs?.length! > 0 ? (
             chats?.docs.map((chat) => <ChatRow key={chat.id} id={chat.id} />)
           ) : (
