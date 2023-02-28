@@ -25,9 +25,13 @@ const Sidebar = (props: Props) => {
         <div className="">
           <NewChat />
           <div className="">{/* ModalSelection */}</div>
-          {chats?.docs.map((chat) => (
-            <ChatRow key={chat.id} id={chat.id} />
-          ))}
+          {chats?.docs?.length! > 0 ? (
+            chats?.docs.map((chat) => <ChatRow key={chat.id} id={chat.id} />)
+          ) : (
+            <p className="text-center text-sm md:text-lg mt-2 md:mt-5 text-white">
+              Loading...
+            </p>
+          )}
         </div>
       </div>
       {session && (
