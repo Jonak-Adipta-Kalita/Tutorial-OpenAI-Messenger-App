@@ -1,7 +1,9 @@
-type Props = {};
+type Props = {
+  id: string;
+};
 
-const Chats = (props: Props) => {
-  return <div>Chats</div>;
+const Chats = ({ id }: Props) => {
+  return <div className="flex-1">Chats</div>;
 };
 
 export default Chats;
